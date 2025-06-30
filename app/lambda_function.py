@@ -31,6 +31,6 @@ class LambdaFunction:
 lambda_handle = LambdaFunction().handle
 
 
-def lambda_function(event, context):
+def lambda_handler(event, context):
     print("Received event:", event)
     lambda_handle(event, context)
