@@ -1,4 +1,4 @@
-from src.adapter.aws.glue.glue import Glue
+from adapter.aws.glue.glue import Glue
 
 
 class AWS:

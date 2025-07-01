@@ -1,4 +1,4 @@
-from lambda_function import lambda_function
+from lambda_function import lambda_handler
 
 
 def simulate_event():
@@ -25,4 +25,4 @@ def simulate_event():
 
 
 if __name__ == "__main__":
-    lambda_function(simulate_event, {})
+    lambda_handler(simulate_event, {})

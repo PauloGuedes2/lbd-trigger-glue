@@ -1,12 +1,12 @@
-from src.adapter.aws.aws import AWS
-from src.config.constants import GLUE_BDI_JOB_NAME
-from src.util.utils import Utils
+from adapter.aws.aws import AWS
+from config.constants import GLUE_BDI_JOB_NAME
+from util.utils import Utils
 
 
 class LambdaFunction:
     def __init__(self):
         self._aws = AWS()
-        self._glue = self._aws.glue()
+        self._glue = self._aws.glue
         self._utils = Utils()
 
     def handle(self, event, context):
