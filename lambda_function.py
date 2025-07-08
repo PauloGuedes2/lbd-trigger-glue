@@ -18,11 +18,7 @@ class LambdaFunction:
             s3_key = self._utils.extract_s3_key(event)
             print(f"Processing S3 event for bucket: {bucket_name}, key: {s3_key}")
 
-            arguments = {
-                '--S3_INPUT_FILE': f's3://{bucket_name}/{s3_key}',
-            }
-
-            job_run_id = self._glue.start_job_run(GLUE_BDI_JOB_NAME, arguments)
+            job_run_id = self._glue.start_job_run(GLUE_BDI_JOB_NAME)
             print(f"Started Glue job '{GLUE_BDI_JOB_NAME}' with run ID: {job_run_id}")
         except Exception as e:
             raise RuntimeError(f"Failed to process event: {e}")
